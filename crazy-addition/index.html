@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crazy Addition Privacy</title>
+<meta name="description" content="Privacy policy for the Crazy Addition Android app (com.gamini.crazyaddition) by Gamini.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#F7F9FC;
+    --surface:#FFFFFF;
+    --surface-raised:#FFFFFF;
+    --text:#1B2430;
+    --text-muted:#5B6675;
+    --accent:#2F6FED;
+    --accent-ink:#1449C4;
+    --accent-soft:#E8F0FE;
+    --border:#E3E8F0;
+    --code-bg:#EEF2F8;
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#10151D;
+      --surface:#161D27;
+      --surface-raised:#1C2532;
+      --text:#E7ECF3;
+      --text-muted:#9AA6B5;
+      --accent:#6FA1FF;
+      --accent-ink:#BBD3FF;
+      --accent-soft:#1D2A3F;
+      --border:#283242;
+      --code-bg:#1C2532;
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#10151D;
+    --surface:#161D27;
+    --surface-raised:#1C2532;
+    --text:#E7ECF3;
+    --text-muted:#9AA6B5;
+    --accent:#6FA1FF;
+    --accent-ink:#BBD3FF;
+    --accent-soft:#1D2A3F;
+    --border:#283242;
+    --code-bg:#1C2532;
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+    line-height:1.65;
+    padding-inline:20px;
+    padding-block:32px 64px;
+  }
+  h1,h2,h3{
+    font-family:"Lexend","Source Sans 3",system-ui,sans-serif;
+    text-wrap:balance;
+    line-height:1.25;
+  }
+  .wrap{
+    max-width:760px;
+    margin-inline:auto;
+  }
+
+  header.top{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:28px;
+  }
+  .mark{
+    width:44px;height:44px;border-radius:12px;
+    background:linear-gradient(155deg,var(--accent),var(--accent-ink));
+    display:flex;align-items:center;justify-content:center;
+    color:white;font-family:"Lexend",sans-serif;font-weight:700;font-size:20px;
+    flex:none;
+  }
+  header.top .id{flex:1;min-width:0;}
+  header.top .id .name{font-family:"Lexend",sans-serif;font-weight:600;font-size:15px;}
+  header.top .id .pkg{font-size:12.5px;color:var(--text-muted);font-family:"JetBrains Mono",monospace;}
+
+  .lang-toggle{
+    display:inline-flex;
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:3px;
+    gap:2px;
+    background:var(--surface);
+    flex:none;
+  }
+  .lang-toggle button{
+    border:none;background:transparent;color:var(--text-muted);
+    font-family:"Lexend",sans-serif;font-size:12.5px;font-weight:600;
+    padding:6px 13px;border-radius:999px;cursor:pointer;
+    transition:background .15s ease,color .15s ease;
+  }
+  .lang-toggle button.active{background:var(--accent);color:#fff;}
+
+  .hero{
+    padding:28px 26px;
+    border-radius:20px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    margin-bottom:28px;
+  }
+  .hero h1{font-size:26px;margin:0 0 8px;}
+  .hero .sub{color:var(--text-muted);font-size:14.5px;margin:0;}
+  .hero .meta{
+    margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;
+  }
+  .chip{
+    font-size:12px;font-family:"Lexend",sans-serif;font-weight:500;
+    background:var(--accent-soft);color:var(--accent-ink);
+    padding:5px 11px;border-radius:999px;
+  }
+
+  nav.toc{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:18px 22px;
+    margin-bottom:32px;
+  }
+  nav.toc .label{
+    font-family:"Lexend",sans-serif;font-size:11.5px;font-weight:600;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);
+    margin-bottom:10px;
+  }
+  nav.toc ol{margin:0;padding-left:0;list-style:none;columns:2;column-gap:24px;}
+  nav.toc li{break-inside:avoid;margin-bottom:6px;}
+  nav.toc a{color:var(--text);text-decoration:none;font-size:13.5px;}
+  nav.toc a:hover{color:var(--accent);}
+  nav.toc a .n{color:var(--accent);font-family:"JetBrains Mono",monospace;margin-right:6px;}
+
+  section.card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:24px 26px;
+    margin-bottom:16px;
+    scroll-margin-top:16px;
+  }
+  section.card h2{
+    font-size:17px;margin:0 0 10px;
+    display:flex;align-items:baseline;gap:10px;
+  }
+  section.card h2 .n{
+    font-family:"JetBrains Mono",monospace;color:var(--accent);font-size:14px;
+  }
+  section.card p{margin:0 0 10px;font-size:14.5px;color:var(--text);}
+  section.card p:last-child{margin-bottom:0;}
+  section.card ul{margin:0 0 10px;padding-left:20px;font-size:14.5px;}
+  section.card li{margin-bottom:5px;}
+  section.card strong{color:var(--text);}
+  section.card a.ext{color:var(--accent);}
+
+  table.perm{
+    width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px;
+  }
+  table.perm th{
+    text-align:left;font-family:"Lexend",sans-serif;font-size:11.5px;
+    text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);
+    padding:6px 10px 6px 0;border-bottom:1px solid var(--border);
+  }
+  table.perm td{
+    padding:9px 10px 9px 0;border-bottom:1px solid var(--border);
+    vertical-align:top;
+  }
+  table.perm tr:last-child td{border-bottom:none;}
+  table.perm code{
+    font-family:"JetBrains Mono",monospace;font-size:12px;
+    background:var(--code-bg);padding:2px 6px;border-radius:5px;
+    white-space:nowrap;
+  }
+
+  .contact-box{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    background:var(--code-bg);border-radius:12px;padding:12px 16px;
+    flex-wrap:wrap;margin-top:6px;
+  }
+  .contact-box .addr{font-family:"JetBrains Mono",monospace;font-size:13.5px;}
+  .contact-box button{
+    border:1px solid var(--border);background:var(--surface);color:var(--text);
+    font-family:"Lexend",sans-serif;font-size:12px;font-weight:600;
+    padding:6px 12px;border-radius:8px;cursor:pointer;
+  }
+  .contact-box button:hover{border-color:var(--accent);color:var(--accent);}
+
+  footer.bottom{
+    text-align:center;color:var(--text-muted);font-size:12.5px;
+    margin-top:36px;
+  }
+
+  [data-lang="en"]{display:none;}
+  body.lang-en [data-lang="tr"]{display:none;}
+  body.lang-en span[data-lang="en"]{display:inline;}
+  body.lang-en button[data-lang="en"]{display:inline-block;}
+  body.lang-en th[data-lang="en"],
+  body.lang-en td[data-lang="en"]{display:table-cell;}
+  body.lang-en h1[data-lang="en"],
+  body.lang-en p[data-lang="en"],
+  body.lang-en ul[data-lang="en"],
+  body.lang-en div[data-lang="en"]{display:block;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="mark">+</div>
+    <div class="id">
+      <div class="name">Crazy Addition</div>
+      <div class="pkg">com.gamini.crazyaddition · Gamini</div>
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" id="btn-tr" class="active">TR</button>
+      <button type="button" id="btn-en">EN</button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-lang="tr">Gizlilik Politikası</h1>
+    <h1 data-lang="en">Privacy Policy</h1>
+    <p class="sub" data-lang="tr">Crazy Addition (com.gamini.crazyaddition) uygulaması için — Gamini tarafından geliştirilmiştir.</p>
+    <p class="sub" data-lang="en">For the app Crazy Addition (com.gamini.crazyaddition) — developed by Gamini.</p>
+    <div class="meta">
+      <span class="chip" data-lang="tr">Son güncelleme: 24 Eylül 2026</span>
+      <span class="chip" data-lang="en">Last updated: September 24, 2026</span>
+      <span class="chip">v1.1.0</span>
+    </div>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <div class="label" data-lang="tr">İçindekiler</div>
+    <div class="label" data-lang="en">Contents</div>
+    <ol>
+      <li><a href="#giris"><span class="n">01</span><span data-lang="tr">Giriş</span><span data-lang="en">Introduction</span></a></li>
+      <li><a href="#veriler"><span class="n">02</span><span data-lang="tr">Topladığımız Veriler</span><span data-lang="en">Data We Collect</span></a></li>
+      <li><a href="#kullanim"><span class="n">03</span><span data-lang="tr">Verilerin Kullanımı</span><span data-lang="en">How Data Is Used</span></a></li>
+      <li><a href="#ucuncu"><span class="n">04</span><span data-lang="tr">Üçüncü Taraf Hizmetler</span><span data-lang="en">Third-Party Services</span></a></li>
+      <li><a href="#izinler"><span class="n">05</span><span data-lang="tr">Uygulama İzinleri</span><span data-lang="en">App Permissions</span></a></li>
+      <li><a href="#cocuk"><span class="n">06</span><span data-lang="tr">Çocukların Gizliliği</span><span data-lang="en">Children's Privacy</span></a></li>
+      <li><a href="#guvenlik"><span class="n">07</span><span data-lang="tr">Veri Güvenliği ve Saklama</span><span data-lang="en">Data Security &amp; Retention</span></a></li>
+      <li><a href="#haklar"><span class="n">08</span><span data-lang="tr">Seçimleriniz ve Haklarınız</span><span data-lang="en">Your Choices &amp; Rights</span></a></li>
+      <li><a href="#degisiklik"><span class="n">09</span><span data-lang="tr">Politikadaki Değişiklikler</span><span data-lang="en">Changes to This Policy</span></a></li>
+      <li><a href="#iletisim"><span class="n">10</span><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span></a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="giris">
+    <h2><span class="n">01</span><span data-lang="tr">Giriş</span><span data-lang="en">Introduction</span></h2>
+    <p data-lang="tr">Bu gizlilik politikası, <strong>Gamini</strong> tarafından geliştirilen ve Google Play'de yayınlanan <strong>Crazy Addition</strong> (paket adı: <code>com.gamini.crazyaddition</code>) mobil uygulamasını kapsar. Uygulama, çocuklara toplama işlemini gizemli ve eğlenceli bir macera içinde öğretmek amacıyla tasarlanmış çevrimdışı çalışan bir eğitim oyunudur.</p>
+    <p data-lang="tr">Bu sayfa, uygulamayı kullanırken hangi verilerin toplandığını, nasıl kullanıldığını ve haklarınızın neler olduğunu açıklar.</p>
+    <p data-lang="en">This privacy policy covers the <strong>Crazy Addition</strong> mobile app (package name: <code>com.gamini.crazyaddition</code>), developed by <strong>Gamini</strong> and published on Google Play. The app is an offline educational game designed to teach children addition through a mysterious, fun adventure.</p>
+    <p data-lang="en">This page explains what data is collected while using the app, how it is used, and what rights you have.</p>
+  </section>
+
+  <section class="card" id="veriler">
+    <h2><span class="n">02</span><span data-lang="tr">Topladığımız Veriler</span><span data-lang="en">Data We Collect</span></h2>
+    <p data-lang="tr">Uygulamanın kendisi; isim, e-posta adresi, telefon numarası, konum, kamera görüntüsü, kişi listesi gibi kişisel veya hassas bilgi <strong>toplamaz</strong>. Kayıt olma veya giriş yapma işlemi yoktur; oyun ilerlemesi yalnızca cihazınızda yerel olarak saklanır.</p>
+    <p data-lang="tr">Uygulama içinde gösterilen reklamlar nedeniyle, entegre ettiğimiz <strong>Unity Ads</strong> reklam SDK'sı aşağıdaki verileri otomatik olarak toplayabilir:</p>
+    <ul data-lang="tr">
+      <li><strong>Reklam Kimliği (Advertising ID)</strong> — cihazınıza özgü, sıfırlanabilir bir reklam tanımlayıcısı</li>
+      <li>Cihaz modeli, işletim sistemi sürümü ve genel donanım bilgisi</li>
+      <li>Yaklaşık konum bilgisi (IP adresinden türetilen, GPS değil)</li>
+      <li>Reklam etkileşim verileri (izlenen/tamamlanan reklam sayısı gibi)</li>
+    </ul>
+    <p data-lang="en">The app itself does <strong>not</strong> collect personal or sensitive information such as your name, email address, phone number, location, camera images, or contact list. There is no sign-up or login; game progress is stored locally on your device only.</p>
+    <p data-lang="en">Because the app displays ads, the integrated <strong>Unity Ads</strong> SDK may automatically collect:</p>
+    <ul data-lang="en">
+      <li><strong>Advertising ID</strong> — a resettable, device-specific ad identifier</li>
+      <li>Device model, OS version, and general hardware info</li>
+      <li>Approximate, IP-derived location (not GPS)</li>
+      <li>Ad interaction data (e.g. ads viewed or completed)</li>
+    </ul>
+  </section>
+
+  <section class="card" id="kullanim">
+    <h2><span class="n">03</span><span data-lang="tr">Verilerin Kullanımı</span><span data-lang="en">How Data Is Used</span></h2>
+    <p data-lang="tr">Toplanan reklam kimliği ve cihaz bilgileri yalnızca şu amaçlarla kullanılır: uygulama içinde reklam göstermek, reklam performansını ölçmek ve reklam sahtekarlığını önlemek. Bu bilgiler; uygulamanın kendisi tarafından profil oluşturmak, davranış izlemek veya üçüncü kişilerle kişisel veri paylaşmak amacıyla kullanılmaz.</p>
+    <p data-lang="en">Collected advertising and device data is used only to serve in-app ads, measure ad performance, and prevent ad fraud. The app itself does not use this information to build user profiles, track behavior across other apps, or share personal data with third parties beyond the ad SDK's own operation.</p>
+  </section>
+
+  <section class="card" id="ucuncu">
+    <h2><span class="n">04</span><span data-lang="tr">Üçüncü Taraf Hizmetler</span><span data-lang="en">Third-Party Services</span></h2>
+    <p data-lang="tr">Uygulama, reklam göstermek için <strong>Unity Technologies</strong>'e ait <strong>Unity Ads</strong> SDK'sını kullanır. Bu SDK, kendi gizlilik politikasına tabi olarak veri toplayabilir ve işleyebilir:</p>
+    <p data-lang="en">The app uses the <strong>Unity Ads</strong> SDK by <strong>Unity Technologies</strong> to display advertisements. This SDK collects and processes data under its own privacy policy:</p>
+    <p><a class="ext" href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">unity.com/legal/game-player-and-app-user-privacy-policy</a></p>
+    <p data-lang="tr">Uygulamanın kendisi; Google Analytics, Firebase veya benzeri ek bir analitik ya da izleme SDK'sı içermez.</p>
+    <p data-lang="en">The app does not include any additional analytics or tracking SDK such as Google Analytics or Firebase.</p>
+  </section>
+
+  <section class="card" id="izinler">
+    <h2><span class="n">05</span><span data-lang="tr">Uygulama İzinleri</span><span data-lang="en">App Permissions</span></h2>
+    <p data-lang="tr">Uygulama, Android işletim sisteminden aşağıdaki izinleri talep eder:</p>
+    <p data-lang="en">The app requests the following Android permissions:</p>
+    <table class="perm">
+      <tr>
+        <th data-lang="tr">İzin</th><th data-lang="en">Permission</th>
+        <th data-lang="tr">Amaç</th><th data-lang="en">Purpose</th>
+      </tr>
+      <tr>
+        <td><code>INTERNET</code></td>
+        <td data-lang="tr">Reklamların yüklenmesi için ağ bağlantısı</td>
+        <td data-lang="en">Network access to load ads</td>
+      </tr>
+      <tr>
+        <td><code>ACCESS_NETWORK_STATE</code></td>
+        <td data-lang="tr">Bağlantı durumunun kontrol edilmesi</td>
+        <td data-lang="en">Checking connectivity status</td>
+      </tr>
+      <tr>
+        <td><code>VIBRATE</code></td>
+        <td data-lang="tr">Oyun içi dokunsal geri bildirim</td>
+        <td data-lang="en">In-game haptic feedback</td>
+      </tr>
+      <tr>
+        <td><code>AD_ID</code></td>
+        <td data-lang="tr">Reklam kimliğine erişim (Unity Ads tarafından kullanılır)</td>
+        <td data-lang="en">Access to the advertising ID (used by Unity Ads)</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="card" id="cocuk">
+    <h2><span class="n">06</span><span data-lang="tr">Çocukların Gizliliği</span><span data-lang="en">Children's Privacy</span></h2>
+    <p data-lang="tr">Crazy Addition, çocuklar tarafından da kullanılabilecek şekilde tasarlanmıştır. Uygulama; isim, e-posta, konum gibi kişisel bilgileri doğrudan çocuklardan istemez veya toplamaz. Reklam kimliği gibi cihaz tanımlayıcılarının işlenmesi, kullandığımız reklam SDK'sının teknik işleyişinin bir parçasıdır ve kalıcı olarak diğer kişisel verilerle ilişkilendirilmez.</p>
+    <p data-lang="tr">Uygulamayı kullanan çocuğunuzun ebeveyni veya vasisiyseniz ve verilerle ilgili bir endişeniz varsa, aşağıdaki iletişim adresinden bize ulaşabilirsiniz.</p>
+    <p data-lang="en">Crazy Addition is designed to be usable by children. The app does not directly request or collect personal information such as name, email, or location from children. Processing of device identifiers such as the advertising ID is part of the underlying ad SDK's technical operation and is not permanently linked to other personal data.</p>
+    <p data-lang="en">If you are a parent or guardian of a child using the app and have concerns about data collection, please contact us using the details below.</p>
+  </section>
+
+  <section class="card" id="guvenlik">
+    <h2><span class="n">07</span><span data-lang="tr">Veri Güvenliği ve Saklama</span><span data-lang="en">Data Security &amp; Retention</span></h2>
+    <p data-lang="tr">Oyun ilerlemeniz ve ayarlarınız yalnızca cihazınızda yerel olarak saklanır; uygulama kaldırıldığında bu veriler de silinir. Uygulama kendi sunucularında kullanıcı verisi barındırmaz. Reklam SDK'sı tarafından toplanan veriler, o SDK'nın kendi altyapısında, kendi saklama süreleri dahilinde tutulur.</p>
+    <p data-lang="en">Your game progress and settings are stored locally on your device only, and are removed when the app is uninstalled. The app does not operate its own servers for storing user data. Data collected by the ad SDK is retained on that provider's own infrastructure, under its own retention periods.</p>
+  </section>
+
+  <section class="card" id="haklar">
+    <h2><span class="n">08</span><span data-lang="tr">Seçimleriniz ve Haklarınız</span><span data-lang="en">Your Choices &amp; Rights</span></h2>
+    <ul data-lang="tr">
+      <li>Cihazınızın <strong>Ayarlar → Google → Reklamlar</strong> bölümünden reklam kimliğinizi sıfırlayabilir veya kişiselleştirilmiş reklamları devre dışı bırakabilirsiniz.</li>
+      <li>Uygulamayı cihazınızdan kaldırarak yerel olarak saklanan tüm oyun verilerini silebilirsiniz.</li>
+      <li>Bulunduğunuz bölgeye bağlı olarak (ör. GDPR/KVKK kapsamında) verilerinize erişim, düzeltme veya silinmesini talep etme hakkına sahip olabilirsiniz; bu tür talepler için bizimle iletişime geçebilirsiniz.</li>
+    </ul>
+    <ul data-lang="en">
+      <li>You can reset your advertising ID or opt out of personalized ads from your device's <strong>Settings → Google → Ads</strong> menu.</li>
+      <li>You can delete all locally stored game data by uninstalling the app.</li>
+      <li>Depending on your region (e.g. under GDPR/KVKK), you may have rights to access, correct, or request deletion of your data — contact us for such requests.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="degisiklik">
+    <h2><span class="n">09</span><span data-lang="tr">Politikadaki Değişiklikler</span><span data-lang="en">Changes to This Policy</span></h2>
+    <p data-lang="tr">Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler bu sayfada yayınlanacak ve sayfanın üst kısmındaki "son güncelleme" tarihi güncellenecektir. Uygulamayı kullanmaya devam etmeniz, güncel politikayı kabul ettiğiniz anlamına gelir.</p>
+    <p data-lang="en">This privacy policy may be updated from time to time. Material changes will be posted on this page, and the "last updated" date at the top will be revised. Continued use of the app indicates acceptance of the current policy.</p>
+  </section>
+
+  <section class="card" id="iletisim">
+    <h2><span class="n">10</span><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span></h2>
+    <p data-lang="tr">Bu politika veya veri uygulamalarımız hakkında sorularınız için bize ulaşın:</p>
+    <p data-lang="en">For questions about this policy or our data practices, reach us at:</p>
+    <div class="contact-box">
+      <span class="addr" id="email-addr">htolgasavas@websitem.com.tr</span>
+      <button type="button" id="copy-btn" data-lang="tr">Kopyala</button>
+      <button type="button" id="copy-btn-en" data-lang="en">Copy</button>
+    </div>
+  </section>
+
+  <footer class="bottom">
+    <span data-lang="tr">© 2026 Gamini — Crazy Addition</span>
+    <span data-lang="en">© 2026 Gamini — Crazy Addition</span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var trBtn = document.getElementById('btn-tr');
+  var enBtn = document.getElementById('btn-en');
+  var body = document.body;
+
+  function setLang(lang){
+    try{ localStorage.setItem('dfk-privacy-lang', lang); }catch(e){}
+    if(lang === 'en'){
+      body.classList.add('lang-en');
+      trBtn.classList.remove('active');
+      enBtn.classList.add('active');
+      document.documentElement.lang = 'en';
+    } else {
+      body.classList.remove('lang-en');
+      enBtn.classList.remove('active');
+      trBtn.classList.add('active');
+      document.documentElement.lang = 'tr';
+    }
+  }
+
+  trBtn.addEventListener('click', function(){ setLang('tr'); });
+  enBtn.addEventListener('click', function(){ setLang('en'); });
+
+  var saved = null;
+  try{ saved = localStorage.getItem('dfk-privacy-lang'); }catch(e){}
+  if(saved === 'en'){ setLang('en'); }
+
+  function bindCopy(btnId){
+    var btn = document.getElementById(btnId);
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      var text = document.getElementById('email-addr').textContent;
+      var original = btn.textContent;
+      function done(ok){
+        btn.textContent = ok ? '✓' : original;
+        setTimeout(function(){ btn.textContent = original; }, 1400);
+      }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){done(true);}).catch(function(){done(false);});
+      } else {
+        done(false);
+      }
+    });
+  }
+  bindCopy('copy-btn');
+  bindCopy('copy-btn-en');
+})();
+</script>
+</body>
+</html>
