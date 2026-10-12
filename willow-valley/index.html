@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Willow Valley Privacy</title>
+<meta name="description" content="Privacy policy for the Willow Valley (Willow Vadisi) app (com.gamini.willowvalley) by Gamini.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#F7F9FC;
+    --surface:#FFFFFF;
+    --surface-raised:#FFFFFF;
+    --text:#1B2430;
+    --text-muted:#5B6675;
+    --accent:#2F6FED;
+    --accent-ink:#1449C4;
+    --accent-soft:#E8F0FE;
+    --border:#E3E8F0;
+    --code-bg:#EEF2F8;
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#10151D;
+      --surface:#161D27;
+      --surface-raised:#1C2532;
+      --text:#E7ECF3;
+      --text-muted:#9AA6B5;
+      --accent:#6FA1FF;
+      --accent-ink:#BBD3FF;
+      --accent-soft:#1D2A3F;
+      --border:#283242;
+      --code-bg:#1C2532;
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#10151D;
+    --surface:#161D27;
+    --surface-raised:#1C2532;
+    --text:#E7ECF3;
+    --text-muted:#9AA6B5;
+    --accent:#6FA1FF;
+    --accent-ink:#BBD3FF;
+    --accent-soft:#1D2A3F;
+    --border:#283242;
+    --code-bg:#1C2532;
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+    line-height:1.65;
+    padding-inline:20px;
+    padding-block:32px 64px;
+  }
+  h1,h2,h3{
+    font-family:"Lexend","Source Sans 3",system-ui,sans-serif;
+    text-wrap:balance;
+    line-height:1.25;
+  }
+  .wrap{
+    max-width:760px;
+    margin-inline:auto;
+  }
+
+  header.top{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:28px;
+  }
+  .mark{
+    width:44px;height:44px;border-radius:12px;
+    background:linear-gradient(155deg,var(--accent),var(--accent-ink));
+    display:flex;align-items:center;justify-content:center;
+    color:white;font-family:"Lexend",sans-serif;font-weight:700;font-size:20px;
+    flex:none;
+  }
+  header.top .id{flex:1;min-width:0;}
+  header.top .id .name{font-family:"Lexend",sans-serif;font-weight:600;font-size:15px;}
+  header.top .id .pkg{font-size:12.5px;color:var(--text-muted);font-family:"JetBrains Mono",monospace;}
+
+  .lang-toggle{
+    display:inline-flex;
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:3px;
+    gap:2px;
+    background:var(--surface);
+    flex:none;
+  }
+  .lang-toggle button{
+    border:none;background:transparent;color:var(--text-muted);
+    font-family:"Lexend",sans-serif;font-size:12.5px;font-weight:600;
+    padding:6px 13px;border-radius:999px;cursor:pointer;
+    transition:background .15s ease,color .15s ease;
+  }
+  .lang-toggle button.active{background:var(--accent);color:#fff;}
+
+  .hero{
+    padding:28px 26px;
+    border-radius:20px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    margin-bottom:28px;
+  }
+  .hero h1{font-size:26px;margin:0 0 8px;}
+  .hero .sub{color:var(--text-muted);font-size:14.5px;margin:0;}
+  .hero .meta{
+    margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;
+  }
+  .chip{
+    font-size:12px;font-family:"Lexend",sans-serif;font-weight:500;
+    background:var(--accent-soft);color:var(--accent-ink);
+    padding:5px 11px;border-radius:999px;
+  }
+
+  nav.toc{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:18px 22px;
+    margin-bottom:32px;
+  }
+  nav.toc .label{
+    font-family:"Lexend",sans-serif;font-size:11.5px;font-weight:600;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);
+    margin-bottom:10px;
+  }
+  nav.toc ol{margin:0;padding-left:0;list-style:none;columns:2;column-gap:24px;}
+  nav.toc li{break-inside:avoid;margin-bottom:6px;}
+  nav.toc a{color:var(--text);text-decoration:none;font-size:13.5px;}
+  nav.toc a:hover{color:var(--accent);}
+  nav.toc a .n{color:var(--accent);font-family:"JetBrains Mono",monospace;margin-right:6px;}
+
+  section.card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:24px 26px;
+    margin-bottom:16px;
+    scroll-margin-top:16px;
+  }
+  section.card h2{
+    font-size:17px;margin:0 0 10px;
+    display:flex;align-items:baseline;gap:10px;
+  }
+  section.card h2 .n{
+    font-family:"JetBrains Mono",monospace;color:var(--accent);font-size:14px;
+  }
+  section.card p{margin:0 0 10px;font-size:14.5px;color:var(--text);}
+  section.card p:last-child{margin-bottom:0;}
+  section.card ul{margin:0 0 10px;padding-left:20px;font-size:14.5px;}
+  section.card li{margin-bottom:5px;}
+  section.card strong{color:var(--text);}
+  section.card a.ext{color:var(--accent);}
+
+  table.perm{
+    width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px;
+  }
+  table.perm th{
+    text-align:left;font-family:"Lexend",sans-serif;font-size:11.5px;
+    text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);
+    padding:6px 10px 6px 0;border-bottom:1px solid var(--border);
+  }
+  table.perm td{
+    padding:9px 10px 9px 0;border-bottom:1px solid var(--border);
+    vertical-align:top;
+  }
+  table.perm tr:last-child td{border-bottom:none;}
+  table.perm code{
+    font-family:"JetBrains Mono",monospace;font-size:12px;
+    background:var(--code-bg);padding:2px 6px;border-radius:5px;
+    white-space:nowrap;
+  }
+
+  .contact-box{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    background:var(--code-bg);border-radius:12px;padding:12px 16px;
+    flex-wrap:wrap;margin-top:6px;
+  }
+  .contact-box .addr{font-family:"JetBrains Mono",monospace;font-size:13.5px;}
+  .contact-box button{
+    border:1px solid var(--border);background:var(--surface);color:var(--text);
+    font-family:"Lexend",sans-serif;font-size:12px;font-weight:600;
+    padding:6px 12px;border-radius:8px;cursor:pointer;
+  }
+  .contact-box button:hover{border-color:var(--accent);color:var(--accent);}
+
+  footer.bottom{
+    text-align:center;color:var(--text-muted);font-size:12.5px;
+    margin-top:36px;
+  }
+
+  [data-lang="en"]{display:none;}
+  body.lang-en [data-lang="tr"]{display:none;}
+  body.lang-en span[data-lang="en"]{display:inline;}
+  body.lang-en button[data-lang="en"]{display:inline-block;}
+  body.lang-en th[data-lang="en"],
+  body.lang-en td[data-lang="en"]{display:table-cell;}
+  body.lang-en h1[data-lang="en"],
+  body.lang-en p[data-lang="en"],
+  body.lang-en ul[data-lang="en"],
+  body.lang-en div[data-lang="en"]{display:block;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="mark">W</div>
+    <div class="id">
+      <div class="name">Willow Valley · Willow Vadisi</div>
+      <div class="pkg">com.gamini.willowvalley · Gamini</div>
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" id="btn-tr" class="active">TR</button>
+      <button type="button" id="btn-en">EN</button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-lang="tr">Gizlilik Politikası</h1>
+    <h1 data-lang="en">Privacy Policy</h1>
+    <p class="sub" data-lang="tr">Willow Vadisi / Willow Valley (com.gamini.willowvalley) uygulaması için — Gamini tarafından geliştirilmiştir.</p>
+    <p class="sub" data-lang="en">For the app Willow Valley / Willow Vadisi (com.gamini.willowvalley) — developed by Gamini.</p>
+    <div class="meta">
+      <span class="chip" data-lang="tr">Son güncelleme: 12 Ekim 2026</span>
+      <span class="chip" data-lang="en">Last updated: October 12, 2026</span>
+      <span class="chip">v1.0.0</span>
+      <span class="chip" data-lang="tr">Reklam yok · Veri toplanmaz</span>
+      <span class="chip" data-lang="en">No ads · No data collected</span>
+    </div>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <div class="label" data-lang="tr">İçindekiler</div>
+    <div class="label" data-lang="en">Contents</div>
+    <ol>
+      <li><a href="#giris"><span class="n">01</span><span data-lang="tr">Giriş</span><span data-lang="en">Introduction</span></a></li>
+      <li><a href="#veriler"><span class="n">02</span><span data-lang="tr">Topladığımız Veriler</span><span data-lang="en">Data We Collect</span></a></li>
+      <li><a href="#internet"><span class="n">03</span><span data-lang="tr">İnternet Kullanımı</span><span data-lang="en">Internet Use</span></a></li>
+      <li><a href="#ucuncu"><span class="n">04</span><span data-lang="tr">Satın Alma ve Üçüncü Taraflar</span><span data-lang="en">Purchases &amp; Third Parties</span></a></li>
+      <li><a href="#izinler"><span class="n">05</span><span data-lang="tr">Uygulama İzinleri</span><span data-lang="en">App Permissions</span></a></li>
+      <li><a href="#cocuk"><span class="n">06</span><span data-lang="tr">Çocukların Gizliliği</span><span data-lang="en">Children&#39;s Privacy</span></a></li>
+      <li><a href="#guvenlik"><span class="n">07</span><span data-lang="tr">Veri Saklama</span><span data-lang="en">Data Storage</span></a></li>
+      <li><a href="#haklar"><span class="n">08</span><span data-lang="tr">Seçimleriniz ve Haklarınız</span><span data-lang="en">Your Choices &amp; Rights</span></a></li>
+      <li><a href="#degisiklik"><span class="n">09</span><span data-lang="tr">Politikadaki Değişiklikler</span><span data-lang="en">Changes to This Policy</span></a></li>
+      <li><a href="#iletisim"><span class="n">10</span><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span></a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="giris">
+    <h2><span class="n">01</span><span data-lang="tr">Giriş</span><span data-lang="en">Introduction</span></h2>
+    <p data-lang="tr">Bu gizlilik politikası, <strong>Gamini</strong> tarafından geliştirilen <strong>Willow Vadisi / Willow Valley</strong> (paket adı: <code>com.gamini.willowvalley</code>) mobil uygulamasını kapsar. Uygulama, 6-10 yaş çocuklar için hazırlanmış, çevrimdışı çalışan bir zekâ ve bulmaca oyunudur. Hiçbir veri toplamayacak şekilde tasarlanmıştır.</p>
+    <p data-lang="en">This privacy policy covers the <strong>Willow Valley / Willow Vadisi</strong> mobile app (package name: <code>com.gamini.willowvalley</code>), developed by <strong>Gamini</strong>. The app is an offline puzzle and brain game for children aged 6 to 10. It is designed to collect no data at all.</p>
+  </section>
+
+  <section class="card" id="veriler">
+    <h2><span class="n">02</span><span data-lang="tr">Topladığımız Veriler</span><span data-lang="en">Data We Collect</span></h2>
+    <p data-lang="tr">Uygulama <strong>hiçbir kişisel veya kullanım verisi toplamaz</strong>: isim, e-posta, telefon, konum, kamera, mikrofon, kişi listesi, reklam kimliği veya cihaz tanımlayıcısı toplanmaz. Hesap, kayıt veya giriş yoktur. Uygulamada <strong>reklam, analiz (analytics) veya takip kodu yoktur</strong>.</p>
+    <p data-lang="en">The app <strong>collects no personal or usage data</strong>: no name, email, phone number, location, camera, microphone, contacts, advertising ID or device identifier. There are no accounts, sign-ups or logins. The app contains <strong>no ads, no analytics and no tracking code</strong>.</p>
+  </section>
+
+  <section class="card" id="internet">
+    <h2><span class="n">03</span><span data-lang="tr">İnternet Kullanımı</span><span data-lang="en">Internet Use</span></h2>
+    <p data-lang="tr">Oyun tamamen çevrimdışı çalışır ve ağ üzerinden hiçbir şey göndermez. Tek istisna, bir ebeveynin <strong>Ebeveyn Alanı</strong>'ndan (ebeveyn kapısının arkasında) satın alma yaptığı andır: bu işlem Google Play'in veya App Store'un kendi ödeme sistemi tarafından yürütülür.</p>
+    <p data-lang="en">The game works fully offline and sends nothing over the network. The only exception is when a parent makes a purchase in the <strong>Parent Area</strong> (behind a parental gate): that transaction is handled by the Google Play or App Store payment system itself.</p>
+  </section>
+
+  <section class="card" id="ucuncu">
+    <h2><span class="n">04</span><span data-lang="tr">Satın Alma ve Üçüncü Taraflar</span><span data-lang="en">Purchases &amp; Third Parties</span></h2>
+    <p data-lang="tr">İsteğe bağlı tek seferlik "tüm vadiyi aç" satın alımı <strong>Google Play Faturalandırma</strong> (Android) veya <strong>Apple App Store</strong> (iOS) üzerinden yapılır. Ödeme ve hesap bilgileri bu mağazalar tarafından, kendi gizlilik politikalarına göre işlenir; bu bilgiler bize ulaşmaz. Uygulama başka hiçbir üçüncü taraf SDK içermez.</p>
+    <p data-lang="en">The optional one-time "unlock the whole valley" purchase is made through <strong>Google Play Billing</strong> (Android) or the <strong>Apple App Store</strong> (iOS). Payment and account details are processed by these stores under their own privacy policies and never reach us. The app contains no other third-party SDKs.</p>
+    <p><a class="ext" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> · <a class="ext" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></p>
+  </section>
+
+  <section class="card" id="izinler">
+    <h2><span class="n">05</span><span data-lang="tr">Uygulama İzinleri</span><span data-lang="en">App Permissions</span></h2>
+    <p data-lang="tr">Oyunun kendisi hiçbir izin istemez. Android sürümünde aşağıdaki izinler <strong>Google Play Faturalandırma kütüphanesi</strong> tarafından eklenir ve yalnızca satın alma için kullanılır:</p>
+    <p data-lang="en">The game itself asks for no permissions. On Android, the following permissions are added by the <strong>Google Play Billing library</strong> and are used only for purchases:</p>
+    <table class="perm">
+      <tr>
+        <th data-lang="tr">İzin</th><th data-lang="en">Permission</th>
+        <th data-lang="tr">Amaç</th><th data-lang="en">Purpose</th>
+      </tr>
+      <tr>
+        <td><code>com.android.vending.BILLING</code></td>
+        <td data-lang="tr">Google Play üzerinden satın alma</td>
+        <td data-lang="en">Purchases through Google Play</td>
+      </tr>
+      <tr>
+        <td><code>INTERNET</code></td>
+        <td data-lang="tr">Satın alma sırasında Google Play ile iletişim (oyun kullanmaz)</td>
+        <td data-lang="en">Talking to Google Play during a purchase (not used by the game)</td>
+      </tr>
+      <tr>
+        <td><code>ACCESS_NETWORK_STATE</code></td>
+        <td data-lang="tr">Satın alma için bağlantı durumunun kontrolü</td>
+        <td data-lang="en">Checking connectivity for purchases</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="card" id="cocuk">
+    <h2><span class="n">06</span><span data-lang="tr">Çocukların Gizliliği</span><span data-lang="en">Children&#39;s Privacy</span></h2>
+    <p data-lang="tr">Willow Vadisi çocuklar için yapılmıştır. Çocuklardan hiçbir kişisel bilgi istenmez veya toplanmaz. Satın alma ve uygulama dışına çıkan bağlantılar yalnızca bir <strong>ebeveyn kapısının</strong> arkasından açılabilir. COPPA (ABD), GDPR / UK GDPR (AB / Birleşik Krallık) ve KVKK (Türkiye) ilkelerine uyulur.</p>
+    <p data-lang="en">Willow Valley is made for children. No personal information is requested from or collected about children. Purchases and links that leave the app can only be opened behind a <strong>parental gate</strong>. We follow the principles of COPPA (US), GDPR / UK GDPR (EU / UK) and KVKK (Turkey).</p>
+  </section>
+
+  <section class="card" id="guvenlik">
+    <h2><span class="n">07</span><span data-lang="tr">Veri Saklama</span><span data-lang="en">Data Storage</span></h2>
+    <p data-lang="tr">Oyun ilerlemesi ve ayarlar yalnızca cihazınızda yerel olarak saklanır; uygulama kaldırıldığında bunlar da silinir. Uygulamanın sunucusu yoktur ve hiçbir veri cihaz dışına gönderilmez.</p>
+    <p data-lang="en">Game progress and settings are stored locally on your device only and are removed when the app is uninstalled. The app has no servers and sends no data off the device.</p>
+  </section>
+
+  <section class="card" id="haklar">
+    <h2><span class="n">08</span><span data-lang="tr">Seçimleriniz ve Haklarınız</span><span data-lang="en">Your Choices &amp; Rights</span></h2>
+    <ul data-lang="tr">
+      <li>Ebeveyn Alanı'ndaki <strong>İlerlemeyi sıfırla</strong> düğmesiyle cihazdaki tüm oyun ilerlemesini silebilirsiniz.</li>
+      <li>Uygulamayı kaldırarak cihazda saklanan tüm verileri silebilirsiniz.</li>
+      <li>Kişisel veri toplanmadığı için erişilecek, düzeltilecek veya silinecek bir veri bulunmaz. Sorularınız için bize yazabilirsiniz.</li>
+    </ul>
+    <ul data-lang="en">
+      <li>You can erase all game progress on the device with the <strong>Reset progress</strong> button in the Parent Area.</li>
+      <li>You can delete all locally stored data by uninstalling the app.</li>
+      <li>Because no personal data is collected, there is nothing to access, correct or delete. Feel free to contact us with any questions.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="degisiklik">
+    <h2><span class="n">09</span><span data-lang="tr">Politikadaki Değişiklikler</span><span data-lang="en">Changes to This Policy</span></h2>
+    <p data-lang="tr">Bu gizlilik politikası zaman zaman güncellenebilir. Değişiklikler bu sayfada yayınlanır ve üst kısımdaki "son güncelleme" tarihi güncellenir.</p>
+    <p data-lang="en">This privacy policy may be updated from time to time. Changes are posted on this page and the "last updated" date at the top is revised.</p>
+  </section>
+
+  <section class="card" id="iletisim">
+    <h2><span class="n">10</span><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span></h2>
+    <p data-lang="tr">Bu politika hakkında sorularınız için bize ulaşın:</p>
+    <p data-lang="en">For questions about this policy, reach us at:</p>
+    <div class="contact-box">
+      <span class="addr" id="email-addr">htolgasavas@websitem.com.tr</span>
+      <button type="button" id="copy-btn" data-lang="tr">Kopyala</button>
+      <button type="button" id="copy-btn-en" data-lang="en">Copy</button>
+    </div>
+  </section>
+
+  <footer class="bottom">
+    <span data-lang="tr">© 2026 Gamini — Willow Vadisi</span>
+    <span data-lang="en">© 2026 Gamini — Willow Valley</span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var trBtn = document.getElementById('btn-tr');
+  var enBtn = document.getElementById('btn-en');
+  var body = document.body;
+
+  function setLang(lang){
+    try{ localStorage.setItem('dfk-privacy-lang', lang); }catch(e){}
+    if(lang === 'en'){
+      body.classList.add('lang-en');
+      trBtn.classList.remove('active');
+      enBtn.classList.add('active');
+      document.documentElement.lang = 'en';
+    } else {
+      body.classList.remove('lang-en');
+      enBtn.classList.remove('active');
+      trBtn.classList.add('active');
+      document.documentElement.lang = 'tr';
+    }
+  }
+
+  trBtn.addEventListener('click', function(){ setLang('tr'); });
+  enBtn.addEventListener('click', function(){ setLang('en'); });
+
+  var saved = null;
+  try{ saved = localStorage.getItem('dfk-privacy-lang'); }catch(e){}
+  if(saved === 'en'){ setLang('en'); }
+
+  function bindCopy(btnId){
+    var btn = document.getElementById(btnId);
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      var text = document.getElementById('email-addr').textContent;
+      var original = btn.textContent;
+      function done(ok){
+        btn.textContent = ok ? '✓' : original;
+        setTimeout(function(){ btn.textContent = original; }, 1400);
+      }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){done(true);}).catch(function(){done(false);});
+      } else {
+        done(false);
+      }
+    });
+  }
+  bindCopy('copy-btn');
+  bindCopy('copy-btn-en');
+})();
+</script>
+</body>
+</html>
